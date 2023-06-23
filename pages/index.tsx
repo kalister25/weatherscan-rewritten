@@ -1,63 +1,52 @@
-import * as React from "react";
-import { useRouter } from "next/router";
+<!-- Replace the existing HTML code with the following structure -->
 
-import { AudioPlayerProvider } from "react-use-audio-player";
-import MusicAudio from "../components/MusicAudio";
+<header>
+  <h1 class="logo">WeatherScan</h1>
+</header>
 
-import Intro from "../components/Intro";
-import Display from "../components/Display";
+<main>
+  <section class="weather-info">
+    <div class="weather-icon">
+      <img src="weather-icon.png" alt="Weather Icon">
+    </div>
+    <div class="temperature">
+      <h2>25°C</h2>
+    </div>
+    <div class="conditions">
+      <p>Sunny</p>
+    </div>
+  </section>
 
-import { useWinSizeInner } from "../hooks/useWinSize";
+  <section class="forecast">
+    <div class="day">
+      <h3>Monday</h3>
+      <img src="weather-icon.png" alt="Weather Icon">
+      <p>Sunny</p>
+    </div>
+    <div class="day">
+      <h3>Tuesday</h3>
+      <img src="weather-icon.png" alt="Weather Icon">
+      <p>Cloudy</p>
+    </div>
+    <div class="day">
+      <h3>Wednesday</h3>
+      <img src="weather-icon.png" alt="Weather Icon">
+      <p>Rainy</p>
+    </div>
+  </section>
 
-const Index = () => {
-    const { isReady, query } = useRouter();
-    const [loading, setLoading] = React.useState<boolean>(true);
-    const [location, setLocation] = React.useState<string>("");
-    const [language, setLanguage] = React.useState<string>("en-US");
-    const [innerWidth, innerHeight] = useWinSizeInner();
-    const [introDone, setIntroDone] = React.useState<boolean>(false);
+  <section class="map">
+    <img src="map.png" alt="Weather Map">
+  </section>
+</main>
 
-    const [musicVol, setMusicVol] = React.useState<number>(1);
-
-    const IntroCallback = () => {
-        setIntroDone(true);
-    };
-
-    React.useEffect(() => {
-        if (!isReady) return;
-        const location = query.location as string;
-        const language = query.language as string;
-
-        // Custom location
-        if (location !== undefined && location !== null) {
-            setLocation(location);
-        }
-
-        // Custom language
-        if (language !== undefined && language !== null) {
-            setLanguage(language);
-        }
-
-        setLoading(false);
-    }, [isReady]);
-
-    if (loading) return <div>Loading...</div>;
-
-    return (
-        <>
-            <AudioPlayerProvider>
-                <MusicAudio vol={musicVol} />
-            </AudioPlayerProvider>
-            <Intro winSize={[innerWidth, innerHeight]} callback={IntroCallback} />
-            <Display
-                isReady={introDone}
-                winSize={[innerWidth, innerHeight]}
-                location={location}
-                language={language}
-                setMainVol={setMusicVol}
-            />
-        </>
-    );
-};
-
-export default Index;
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2023 WeatherScan. All rights reserved.</p>
+    <ul class="social-icons">
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+</footer>
