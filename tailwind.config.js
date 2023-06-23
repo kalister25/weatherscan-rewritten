@@ -39,6 +39,23 @@ module.exports = {
         "frost-pane": "url(/images/newbg/frostpane.svg)",
         "severe-frost-pane": "url(/images/newbg/severefrostpane.svg)",
         "city-info-slide": "url(/images/newbg/core_mountain_bg.png)"
+	"golf-intro-slide": "url(/images/newbg/golf_intro_bg.png)"
+	"golf-info-slide": "url(/images/newbg/golf_bg.png)"
+	"golf-promo-slide": "url(/images/newbg/golf_promo.png)"
+	"travel-intro-slide": "url(/images/newbg/travel_intro_bg.png)"
+	"travel-info-slide": "url(/images/newbg/travel_bg.png)"
+	"airport-intro-slide": "url(/images/newbg/airport_intro_bg.png)"
+	"airport-info-slide": "url(/images/newbg/airport_bg.png)"
+	"international-intro-slide": "url(/images/newbg/international_intro_bg.png)"
+	"international-info-slide": "url(/images/newbg/international_bg.png)"
+	"garden-intro-slide": "url(/images/newbg/garden_intro_bg.png)"
+	"garden-info-slide": "url(/images/newbg/garden_bg.png)"
+	"garden-promo-slide": "url(/images/newbg/garden_promo.png)"
+	"health-intro-slide": "url(/images/newbg/health_intro_bg.png)"
+	"health-info-slide": "url(/images/newbg/health_bg.png)"
+	"health-promo-slide": "url(/images/newbg/health_promo.png)"
+	"boat and beach-intro-slide": "url(/images/newbg/boatbeach_intro_bg.png)"
+	"boat and beach-info-slide": "url(/images/newbg/boatbeach_bg.png)"
       },
       backgroundColor: {
         "cityaccent-yellow": "#e5be45",
